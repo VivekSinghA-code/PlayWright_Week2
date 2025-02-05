@@ -16,6 +16,11 @@ test('Test to automate the leaftaps',async({page})=>{
     await page.locator("#createLeadForm_lastName").fill("Test Lead");
     await page.locator("#createLeadForm_firstNameLocal").fill("Vivek");
     await page.locator("#createLeadForm_lastNameLocal").fill("Vivek");
+    await page.locator("#createLeadForm_personalTitle").fill("Mr.");
+    await page.locator("#createLeadForm_generalProfTitle").fill("TestEngineer");
+    await page.locator("#createLeadForm_annualRevenue").fill("90000000");
+    await page.locator("#createLeadForm_departmentName").fill("Automation Testing");
+    await page.locator("#createLeadForm_primaryPhoneNumber").fill("123456789");
     await page.locator(".smallSubmit").click();
     const status=page.locator("#viewLead_statusId_sp");
     const statusText=await status.innerText();
